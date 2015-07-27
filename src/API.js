@@ -6,8 +6,16 @@ export default {
   getEntry(entryCode) {
     request
       .get(`${API_HOST}/entry/${entryCode}`)
-      .end(function(err, responseFromServer) {
+      .end((err, responseFromServer) => {
         ServerActions.receiveEntry(responseFromServer.body);
+        this.getEntryNames(entryCode);
+      });
+  },
+  getEntryNames(entryCode) {
+    request
+      .get(`${API_HOST}/entries/${entryCode}/names`)
+      .end(function(err, responseFromServer) {
+        ServerActions.receiveEntryNames(responseFromServer.body.names);
       });
   }
 }

@@ -7,5 +7,11 @@ export default {
       actionType: Actions.RECEIVE_ENTRY,
       payload
     });
+  },
+  receiveEntryNames(payload) {
+    AppDispatcher.dispatch({
+      actionType: Actions.RECEIVE_ENTRY_NAMES,
+      payload
+    });
   }
 }

@@ -2,6 +2,7 @@ var React = require('react');
 var Entry = require('./Entry');
 var Rewards = require('./Rewards');
 var NameList = require('./NameList');
+var NamingForm = require('./NamingForm');
 
 import EntryStore from "../stores/EntryStore";
 import API from '../API';
@@ -29,9 +30,10 @@ var EntryContainer = React.createClass({
   render: function() {
     return (
       <div id="entryContainer" className="row">
+        <NamingForm />
         <Entry entry={this.state.entry} />
         <Rewards />
-        <NameList />
+        <NameList list={this.state.entry.names} />
       </div>
     );
   }
