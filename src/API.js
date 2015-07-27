@@ -5,7 +5,7 @@ import ServerActions from './actions/ServerActions';
 export default {
   getEntry(entryCode) {
     request
-      .get(`${API_HOST}/${entryCode}`)
+      .get(`${API_HOST}/entry/${entryCode}`)
       .end(function(err, responseFromServer) {
         ServerActions.receiveEntry(responseFromServer.body);
       });

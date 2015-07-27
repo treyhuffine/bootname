@@ -18,7 +18,7 @@ var EntryContainer = React.createClass({
     this.setState(getEntryFromStore());
   },
   componentWillMount: function() {
-    API.getEntry("book/87519463-react-and-flux-getting-started-book");
+    API.getEntry(this.props.params.code);
   },
   componentDidMount: function() {
     EntryStore.addChangeListener(this._onChange);
