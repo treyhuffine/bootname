@@ -1,5 +1,6 @@
 export default {
   RECEIVE_ENTRY: 'RECEIVE_ENTRY',
   RECEIVE_ENTRY_NAMES: 'RECEIVE_ENTRY_NAMES',
+  RECEIVE_POSTED_NAME: 'RECEIVE_POSTED_NAME',
   API_HOST: 'https://bootname.herokuapp.com'
 }

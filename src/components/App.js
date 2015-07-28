@@ -5,9 +5,10 @@ export default React.createClass({
     return (
       <div className="appHolder">
         <div className="body">
-            <div className="container">
-                {this.props.children}
-            </div>
+          <div className="container">
+            <h1>Main</h1>
+            {this.props.children}
+          </div>
         </div>
       </div>
     );

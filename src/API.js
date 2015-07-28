@@ -17,5 +17,13 @@ export default {
       .end(function(err, responseFromServer) {
         ServerActions.receiveEntryNames(responseFromServer.body.names);
       });
+  },
+  submitNameEntry(entryCode, name) {
+    request
+      .post(`${API_HOST}/entries/${entryCode}/names`)
+      .send({name: name})
+      .end(function(err, responseFromServer) {
+        ServerActions.receivePostedName(responseFromServer.body);
+      });
   }
 }

@@ -26,6 +26,11 @@ AppDispatcher.register(action => {
       EntryStore.emitChange();
       break;
 
+    case Actions.RECEIVE_POSTED_NAME:
+      _entryNames.push(action.payload);
+      EntryStore.emitChange();
+      break;
+      
     default:
       // do nothing
   }

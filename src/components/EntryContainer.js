@@ -30,7 +30,7 @@ var EntryContainer = React.createClass({
   render: function() {
     return (
       <div id="entryContainer" className="row">
-        <NamingForm />
+        <NamingForm entryCode={this.state.entry.code}/>
         <Entry entry={this.state.entry} />
         <Rewards />
         <NameList list={this.state.entry.names} />

@@ -13,5 +13,12 @@ export default {
       actionType: Actions.RECEIVE_ENTRY_NAMES,
       payload
     });
+  },
+  receivePostedName(payload) {
+    console.log(payload);
+    AppDispatcher.dispatch({
+      actionType: Actions.RECEIVE_POSTED_NAME,
+      payload
+    })
   }
 }
